@@ -1,0 +1,89 @@
+
+// number of teams initial;
+
+let teams = 0;
+
+// all name list;
+let name_list = [];
+
+// main array for team names;
+
+let arr = [];
+
+// target: adding event listener click to the fix button;
+
+let start = document.getElementById("fix_button");
+
+console.log(start);
+
+start.addEventListener("click", function(event) {
+    fix_team();
+})
+
+
+// fix team function;
+
+const fix_team = function() {
+    // setting up a main array;
+
+    let num = parseInt(document.getElementById("input_value").value);
+    teams = num;
+    for(i = 0; i< num; i++) {
+        arr[i] = new Array();
+        // let arr_check = "xxx";
+        // arr.concat(arr_check);
+    }
+    console.log(arr.length, "is the length of array");
+    console.log(arr);
+}
+
+// adding event listener to the input to add the name;
+
+let name_check = document.getElementById("input_button");
+
+name_check.addEventListener("click", function() {
+    add_name();
+})
+
+// add name function;
+
+const add_name = function() {
+    let name_doc = String(document.getElementById("name_value").value);
+    random_num = Math.floor(Math.random() * teams);
+    // if the name is already not specified;
+    if (name_list.includes(name_doc)) {
+
+    } else {
+
+        console.log(random_num, "This is the random number alloted to the name", name_doc);
+
+        // adding the name to the random team array;
+    
+        arr[random_num].push(name_doc);
+        console.log(arr);
+
+    }
+    name_list.push(name_doc);
+
+}
+
+// adding event listener to the remove button;
+
+let remove_doc = document.getElementById("remove_button");
+
+remove_doc.addEventListener("click", function() {
+    remove_name();
+})
+
+// remove name function ;
+
+const remove_name = function() {
+    let name_doc = String(document.getElementById("remove_value").value);
+
+    for (i = 0; i < teams; i++) {
+        if arr[i].length !== 0 {
+            if ()
+    }
+}
+
+
