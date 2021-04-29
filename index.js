@@ -106,18 +106,30 @@ console.log(final_team_doc);
 
 const teamshow = function () {
     for (i = 0; i < teams; i++) {
-        let un_list = document.createElement("ul");
+        let heading = document.createElement("h3");
+        heading.innerText = `Team ${i}`;
+        let un_list = document.createElement("ol");
         for(j = 0; j < arr[i].length; j++) {
 
             let list_item = document.createElement("li");
             list_item.innerText = arr[i][j];
             un_list.appendChild(list_item);
         }
-
+        final_team_doc.appendChild(heading);
         console.log(un_list);
         final_team_doc.appendChild(un_list);
     }
 }
 
 
+// fuction to refresh the page;
+
+function refreshPage(){
+    window.location.reload();
+    i = 1;
+    setTimeout(function() {
+        target_sec.innerText = "***********"
+    }, 1000);
+    num_generator();
+} 
 

@@ -5,3 +5,11 @@ h3 {
   transform: translateY(-50%); */
   color: white;
 }
+
+body {
+  background-color: turquoise;
+}
+
+.first_cont {
+  margin-top: 30px;
+}

@@ -26,7 +26,7 @@
     </a>
   </nav>
 
-  <div class="coniainer" id="input_teams">
+  <div class="coniainer first_cont" id="input_teams">
       <div class="row">
           <div class="col-4">
             <form action="">Number of teams</form>
@@ -35,7 +35,7 @@
             <input class="d-inline" id="input_value" type="text">
         </div>
         <div class="col-4">
-            <button id="fix_button">Fix</button>
+            <button class="btn btn-success" id="fix_button">Fix</button>
         </div>
           </div>
       </div>
@@ -49,7 +49,7 @@
               <input class="d-inline" id="name_value" type="text">
           </div>
           <div class="col-4">
-              <button id="input_button">Add</button>
+              <button class="btn btn-primary" id="input_button">Add</button>
           </div>
             </div>
         </div>
@@ -64,17 +64,21 @@
           <input class="d-inline" id="remove_value" type="text">
       </div>
       <div class="col-4">
-          <button id="remove_button">Remove</button>
+          <button class="btn btn-danger" id="remove_button">Remove</button>
       </div>
         </div>
     </div>
 <br><br>
 
-    <div style="text-align: center;"><button id="final_team">Show teams</button></div>
+    <div style="text-align: center;"><button class="btn btn-dark" id="final_team">Show teams</button></div>
 
         <br><br>
 
 <div id="final_teams"></div>
+
+<br><br>
+<button class="btn btn-primary btn-lg" style="margin-left: 250px;" id="last_btn" type="submit" onClick="refreshPage()">Restart the Game!</button>
+
 
 
     <script src="index.js"></script>
