@@ -77,13 +77,47 @@ remove_doc.addEventListener("click", function() {
 
 // remove name function ;
 
-const remove_name = function() {
-    let name_doc = String(document.getElementById("remove_value").value);
+// const remove_name = function() {
+//     let remove_doc = String(document.getElementById("remove_value").value);
 
+//     for (let i = 0; i < teams; i++) {
+//         if arr[i].length !== 0 {
+//             if (remove_doc in arr[i]) {
+
+//             }
+//     }
+// }
+
+
+// creating a unordered list;
+
+// adding event listner to final_team;
+
+let final_button = document.getElementById("final_team");
+
+final_button.addEventListener("click", function(){
+    teamshow();
+})
+
+// final team document;
+
+let final_team_doc = document.getElementById("final_teams");
+console.log(final_team_doc);
+
+const teamshow = function () {
     for (i = 0; i < teams; i++) {
-        if arr[i].length !== 0 {
-            if ()
+        let un_list = document.createElement("ul");
+        for(j = 0; j < arr[i].length; j++) {
+
+            let list_item = document.createElement("li");
+            list_item.innerText = arr[i][j];
+            un_list.appendChild(list_item);
+        }
+
+        console.log(un_list);
+        final_team_doc.appendChild(un_list);
     }
 }
+
 
 
